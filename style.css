@@ -280,6 +280,62 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 0 3px rgba(47,202,214,0.15);
 }
 
+/* ---- Kit (ConvertKit) embedded form overrides ----
+   Kit ships inline styles + its own stylesheet on the injected form,
+   so !important is required to make it match the dark theme. */
+.formkit-form-wrap .formkit-form { max-width: 100%; }
+
+.formkit-form-wrap .formkit-fields { gap: 0; }
+
+.formkit-form-wrap .formkit-input {
+  background: var(--surface-alt) !important;
+  border: 1px solid var(--border-strong) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--text) !important;
+  font-family: var(--font-body) !important;
+  font-size: var(--text-base) !important;
+  font-weight: 400 !important;
+}
+
+.formkit-form-wrap .formkit-input::placeholder { color: var(--text-faint) !important; }
+
+.formkit-form-wrap .formkit-input:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(47,202,214,0.15);
+}
+
+.formkit-form-wrap .formkit-submit {
+  background-color: var(--primary) !important;
+  color: #04191B !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  width: 100%;
+}
+
+.formkit-form-wrap .formkit-submit:hover,
+.formkit-form-wrap .formkit-submit:focus {
+  background-color: var(--primary-hover) !important;
+}
+
+.formkit-form-wrap .formkit-submit > span { padding: 0.9rem 1.5rem !important; }
+
+.formkit-form-wrap .formkit-alert-error {
+  background: var(--surface-alt) !important;
+  border-color: var(--error) !important;
+  color: var(--error) !important;
+}
+
+.formkit-form-wrap .formkit-powered-by-convertkit-container {
+  justify-content: flex-start;
+  margin: 0.5rem 0 0 0 !important;
+}
+
+.formkit-form-wrap .formkit-powered-by-convertkit {
+  opacity: 0.55;
+  transform-origin: left center;
+}
+
 .trust-row {
   display: flex;
   flex-direction: column;
